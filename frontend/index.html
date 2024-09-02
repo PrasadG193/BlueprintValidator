@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>BlueprintValidator: Validate Kanister Blueprints</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Bootstrap version 4.3.1-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Code Mirror CSS-->
+    <link rel="stylesheet" type="text/css" href="plugin/codemirror/lib/codemirror.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Main Style CSS-->
+    <link rel="stylesheet" href="./style.css" />
+    <!--Icon -->
+    <link rel="icon" type="image/gif/png"
+      href="https://raw.githubusercontent.com/PrasadG193/yaml2go/master/yaml2go.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150234067-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-150234067-1');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+  <main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron d-flex">
+      <div class="infoData">
+        <div>
+          <p class="k2Go">
+            BlueprintValidator
+          </p>
+          <p class="secondaryData">
+            BlueprintValidator: Validate Kanister Blueprints
+          </p>
+        </div>  
+      </div>
+    </div>
+    <div id="message">
+      <span id="message-span">
+      </span>
+    </div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="position-relative row d-flex justify-content-between mt-4" style="height:65%;">
+        <div class="position-relative form-group apply_space" style="height:85%;">
+          <label for="yaml">Paste Kanister Blueprint Specs in yaml format:</label>
+          <textarea class="form-control codemirror-textarea" id="yamlSpecs" rows="15"></textarea>
+          <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearYaml" />
+        </div>
+        <i class="glyphicon glyphicon-calendar"></i>
+        <div class="position-relative form-group apply_space" style="height:85%;">
+          <label for="goGenerator">Flow Chart:</label>
+          <br>
+          <div id="sequence"></div>
+        </div>
+      </div>
+        <div class="button_yaml">
+          <button class="btn" id="validate" title="Validate">Validate</button>
+        </div>
+      <hr>
+      <p class="credits">
+    </div> <!-- /container -->
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
+  <script src="plugin/codemirror/mode/go/go.js"></script>
+  <script src="plugin/codemirror/mode/yaml/yaml.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
